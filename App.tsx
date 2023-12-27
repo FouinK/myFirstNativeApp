@@ -1,54 +1,54 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import Header from './component/Header.tsx';
+import Title from './component/Title.tsx';
+import Body from './component/Body.tsx';
+import Footer from './component/Footer.tsx';
 
 const App = () => {
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.topBar}>
-        <Text>상단 바</Text>
-      </View>
-
-      <View style={styles.characterContainer}>
-        <Text>중앙 캐릭터</Text>
-      </View>
-
-      <View style={styles.textContainer}>
-        <Text>하단 텍스트 버튼</Text>
-      </View>
-
-      <View style={styles.menuBar}>
-        <Text>하단 메뉴 바</Text>
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <Header />
+      <Title />
+      <Body />
+      <Footer />
+    </View>
   );
 };
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    justifyContent: 'center',
+    backgroundColor: 'black',
   },
-  topBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
-  },
-  characterContainer: {
+  header: {
+    width: '100%',
+    height: '9%',
+    justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#ff9a9a',
   },
-  textContainer: {},
-  menuBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: 10,
+  title: {
+    width: '100%',
+    height: '18%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9aa9ff',
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#d6ca1a',
+  },
+  footer: {
+    width: '100%',
+    height: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1ad657',
   },
 });
-
-export default App;
