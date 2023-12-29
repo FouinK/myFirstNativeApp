@@ -9,7 +9,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <ScrollView style={styles.scrollViewContent}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <Title />
         <Body />
       </ScrollView>
@@ -17,8 +17,6 @@ const App = () => {
     </View>
   );
 };
-
-export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -29,3 +27,5 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
+
+export default App;
