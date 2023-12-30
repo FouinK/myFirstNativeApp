@@ -17,6 +17,8 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9aa9ff',
+    backgroundColor: 'white',
+    borderBottomWidth: 1, // 구분선의 두께
+    borderBottomColor: '#dedede', // 구분선의 색상
   },
 });

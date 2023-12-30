@@ -1,10 +1,18 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Header = () => {
+  const openSettings = () => {
+    console.log('설정 화면으로 이동');
+  };
+
   return (
     <View style={styles.header}>
-      <Text>해더 수정</Text>
+      <Text style={styles.title}>어플 이름</Text>
+      <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
+        <Icon name="md-settings" size={25} color="#000" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -17,6 +25,17 @@ const styles = StyleSheet.create({
     height: '10%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ff9a9a',
+    backgroundColor: 'white',
+    borderBottomWidth: 1, // 구분선의 두께
+    borderBottomColor: '#dedede', // 구분선의 색상
+    flexDirection: 'row',
+    padding: 1,
+  },
+  title: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  settingsButton: {
+    // 설정 버튼에 대한 스타일
   },
 });
