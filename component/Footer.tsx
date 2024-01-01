@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 const Footer = () => {
   return (
     <View style={styles.footer}>
-      <Text>푸터</Text>
+      <Text>홈버튼이나, 광고 ?</Text>
     </View>
   );
 };

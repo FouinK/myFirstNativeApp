@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 const Body = () => {
   return (
     <View style={styles.content}>
-      <Text>Content</Text>
+      <Text>앞으로 며칠 후 뭐가있는지</Text>
     </View>
   );
 };
@@ -13,7 +13,8 @@ export default Body;
 
 const styles = StyleSheet.create({
   content: {
-    flex: 1,
+    flex: 0.8,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#d6ca1a',
