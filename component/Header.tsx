@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Header = () => {
   const openSettings = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     <View style={styles.header}>
       <Text style={styles.title}>어플 이름</Text>
       <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
-        <Icon name="md-settings" size={25} color="#000" />
+        <Icon name="delete" size={25} color="#000" />
       </TouchableOpacity>
     </View>
   );
