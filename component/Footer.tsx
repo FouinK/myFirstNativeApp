@@ -13,8 +13,8 @@ export default Footer;
 
 const styles = StyleSheet.create({
   footer: {
+    flex: 0.1,
     width: '100%',
-    height: '8%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
