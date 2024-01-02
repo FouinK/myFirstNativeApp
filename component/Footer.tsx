@@ -14,11 +14,11 @@ export default Footer;
 const styles = StyleSheet.create({
   footer: {
     width: '100%',
-    height: '10%',
+    height: '8%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    borderBottomWidth: 1, // 구분선의 두께
-    borderBottomColor: '#dedede', // 구분선의 색상
+    borderTopWidth: 1,
+    borderTopColor: '#dedede',
   },
 });

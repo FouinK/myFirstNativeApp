@@ -13,7 +13,7 @@ export default TopMenu;
 
 const styles = StyleSheet.create({
   title: {
-    flex: 0.2,
+    flex: 0.1,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',

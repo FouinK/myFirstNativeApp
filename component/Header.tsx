@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const Header = () => {
@@ -14,21 +8,16 @@ const Header = () => {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <Text style={styles.title}>궁그미</Text>
-        <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
-          <Icon name="delete" size={25} color="#000" />
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+    <View style={styles.header}>
+      <Text style={styles.title}>궁그미</Text>
+      <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
+        <Icon name="delete" size={25} color="#000" />
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  safeArea: {
-    backgroundColor: 'white',
-  },
   header: {
     width: '100%',
     flexDirection: 'row',

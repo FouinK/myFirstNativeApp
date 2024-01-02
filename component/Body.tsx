@@ -13,12 +13,10 @@ export default Body;
 
 const styles = StyleSheet.create({
   content: {
-    flex: 0.8,
+    flex: 1,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    borderBottomWidth: 1, // 구분선의 두께
-    borderBottomColor: '#dedede', // 구분선의 색상
   },
 });
