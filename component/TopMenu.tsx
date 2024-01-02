@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Title = () => {
+const TopMenu = () => {
   return (
     <View style={styles.title}>
       <Text>며칠째인지 나오게</Text>
@@ -9,7 +9,7 @@ const Title = () => {
   );
 };
 
-export default Title;
+export default TopMenu;
 
 const styles = StyleSheet.create({
   title: {
