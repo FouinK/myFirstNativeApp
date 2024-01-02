@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
-        <Text style={styles.title}>어플 이름</Text>
+        <Text style={styles.title}>궁그미</Text>
         <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
           <Icon name="delete" size={25} color="#000" />
         </TouchableOpacity>
