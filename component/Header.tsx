@@ -1,16 +1,26 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ViewStyle,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Header = () => {
+type HeaderProps = {
+  style?: ViewStyle;
+};
+
+const Header: React.FC<HeaderProps> = ({style}) => {
   const openSettings = () => {
     console.log('설정 화면으로 이동');
   };
 
   return (
-    <View style={styles.header}>
-      <Text style={styles.title}>궁그미</Text>
-      <TouchableOpacity onPress={openSettings} style={styles.settingsButton}>
+    <View style={[styles.header, style]}>
+      <Text>궁그미</Text>
+      <TouchableOpacity onPress={openSettings}>
         <Icon name="delete" size={25} color="#000" />
       </TouchableOpacity>
     </View>
@@ -19,7 +29,6 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -29,8 +38,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
-  title: {},
-  settingsButton: {},
 });
 
 export default Header;

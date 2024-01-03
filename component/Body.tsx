@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {ScrollView, Text, StyleSheet} from 'react-native';
 
 const Body = () => {
   return (
-    <View style={styles.content}>
+    <ScrollView style={styles.content}>
       <Text>앞으로 며칠 후 뭐가있는지</Text>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -13,10 +13,6 @@ export default Body;
 
 const styles = StyleSheet.create({
   content: {
-    flex: 1,
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
+    flex: 1, // 이 부분을 변경
   },
 });

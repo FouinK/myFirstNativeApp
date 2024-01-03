@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 
 const TopMenu = () => {
-  const [selectedMenu, setSelectedMenu] = useState('menu1');
+  const [selectedMenu, setSelectedMenu] = useState('1');
   const handleSelectMenu = (menu: string) => {
     // 상태를 업데이트합니다.
     setSelectedMenu(menu);
@@ -33,10 +33,10 @@ export default TopMenu;
 
 const styles = StyleSheet.create({
   scrollView: {
+    flex: 1,
     backgroundColor: 'white',
     borderBottomWidth: 1,
     borderBottomColor: '#dedede',
-    flex: 0.1,
   },
   menuItem: {
     alignItems: 'center',
