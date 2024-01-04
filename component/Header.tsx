@@ -5,6 +5,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   ViewStyle,
+  Platform,
+  StatusBar,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -37,6 +39,13 @@ const styles = StyleSheet.create({
     borderBottomColor: '#dedede',
     paddingVertical: 10,
     paddingHorizontal: 20,
+    marginTop:
+      Platform.OS === 'android'
+        ? StatusBar.currentHeight
+          ? StatusBar.currentHeight + 10
+          : 10
+        : 0, // 안드로이드 경우 marginTop 값을 조정
+    paddingTop: Platform.OS === 'ios' ? 30 : 0, // iOS의 경우 상단바와의 간격 조정
   },
 });
 
