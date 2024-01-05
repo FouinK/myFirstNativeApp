@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import Header from './component/Header';
 import TopMenu, {MenuType} from './component/TopMenu';
-import Ask from './component/Ask';
-import Answer from './component/Answer';
+import Ask from './component/ask/Ask.tsx';
+import Answer from './component/answer/Answer.tsx';
 import Footer from './component/Footer';
 
 const App = () => {
