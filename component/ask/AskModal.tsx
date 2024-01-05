@@ -1,5 +1,13 @@
 import React from 'react';
-import {Modal, View, Text, TextInput, Button, StyleSheet} from 'react-native';
+import {
+  Modal,
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 
 interface AskModalProps {
   visible: boolean;
@@ -13,8 +21,12 @@ const AskModal: React.FC<AskModalProps> = ({visible, setVisible}) => {
       transparent={true}
       visible={visible}
       onRequestClose={() => setVisible(false)}>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
+      <TouchableOpacity
+        style={styles.centeredView}
+        activeOpacity={1}
+        onPressOut={() => setVisible(false)} // 모달 바깥 영역 터치 시 닫힘
+      >
+        <View style={styles.modalView} onStartShouldSetResponder={() => true}>
           <Text>질문 작성하기</Text>
           <TextInput
             style={styles.textInput}
@@ -29,7 +41,7 @@ const AskModal: React.FC<AskModalProps> = ({visible, setVisible}) => {
             />
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     </Modal>
   );
 };
@@ -37,8 +49,9 @@ const AskModal: React.FC<AskModalProps> = ({visible, setVisible}) => {
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
-    justifyContent: 'center', // 세로 방향으로 중앙 정렬
-    alignItems: 'center', // 가로 방향으로 중앙 정렬
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // 모달의 바깥 영역에 투명한 검은색 배경 추가
   },
   modalView: {
     width: '80%', // 화면 너비의 80%
