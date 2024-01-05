@@ -13,7 +13,7 @@ export default Footer;
 
 const styles = StyleSheet.create({
   footer: {
-    flex: 1, // 이 부분을 변경
+    flex: 1,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',

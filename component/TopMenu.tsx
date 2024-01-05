@@ -4,7 +4,6 @@ import {Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 const TopMenu = () => {
   const [selectedMenu, setSelectedMenu] = useState('1');
   const handleSelectMenu = (menu: string) => {
-    // 상태를 업데이트합니다.
     setSelectedMenu(menu);
   };
 
@@ -13,7 +12,6 @@ const TopMenu = () => {
       horizontal={true}
       style={styles.scrollView}
       showsHorizontalScrollIndicator={false}>
-      {/* 각 메뉴 항목을 반복해서 렌더링합니다. */}
       <TouchableOpacity
         style={[styles.menuItem, selectedMenu === '1' && styles.selectedMenu]}
         onPress={() => handleSelectMenu('1')}>

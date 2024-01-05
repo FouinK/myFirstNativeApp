@@ -13,6 +13,6 @@ export default Body;
 
 const styles = StyleSheet.create({
   content: {
-    flex: 1, // 이 부분을 변경
+    flex: 1,
   },
 });
