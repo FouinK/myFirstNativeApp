@@ -1,15 +1,15 @@
 import React from 'react';
 import {ScrollView, Text, StyleSheet} from 'react-native';
 
-const Body = () => {
+const Answer = () => {
   return (
     <ScrollView style={styles.content}>
-      <Text>앞으로 며칠 후 뭐가있는지</Text>
+      <Text>답변하기</Text>
     </ScrollView>
   );
 };
 
-export default Body;
+export default Answer;
 
 const styles = StyleSheet.create({
   content: {

@@ -1,33 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 
-const TopMenu = () => {
-  const [selectedMenu, setSelectedMenu] = useState('1');
-  const handleSelectMenu = (menu: string) => {
-    setSelectedMenu(menu);
-  };
+// TopMenu의 props에 대한 타입 정의
+interface TopMenuProps {
+  selectedMenu: string;
+  onSelectMenu: (menu: string) => void; // onSelectMenu는 문자열을 인자로 받는 함수
+}
 
+const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
   return (
     <ScrollView
       horizontal={true}
       style={styles.scrollView}
       showsHorizontalScrollIndicator={false}>
       <TouchableOpacity
-        style={[styles.menuItem, selectedMenu === '1' && styles.selectedMenu]}
-        onPress={() => handleSelectMenu('1')}>
-        <Text>메뉴 1</Text>
+        style={[styles.menuItem, selectedMenu === 'ask' && styles.selectedMenu]}
+        onPress={() => onSelectMenu('ask')}>
+        <Text>질문하기</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.menuItem, selectedMenu === '2' && styles.selectedMenu]}
-        onPress={() => handleSelectMenu('2')}>
-        <Text>메뉴 2</Text>
+        style={[
+          styles.menuItem,
+          selectedMenu === 'answer' && styles.selectedMenu,
+        ]}
+        onPress={() => onSelectMenu('answer')}>
+        <Text>답변하기</Text>
       </TouchableOpacity>
     </ScrollView>
   );
 };
-
-export default TopMenu;
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -48,3 +50,5 @@ const styles = StyleSheet.create({
     borderBottomColor: 'blue',
   },
 });
+
+export default TopMenu;
