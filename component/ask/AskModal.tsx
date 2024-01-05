@@ -33,7 +33,7 @@ const AskModal: React.FC<AskModalProps> = ({visible, setVisible}) => {
             placeholder="여기에 질문을 작성하세요"
           />
           <View style={styles.buttonContainer}>
-            <Button title="제출하기" onPress={() => setVisible(false)} />
+            <Button title="등록" onPress={() => setVisible(false)} />
             <Button
               title="취소"
               color="red"
