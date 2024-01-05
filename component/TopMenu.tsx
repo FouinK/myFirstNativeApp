@@ -1,10 +1,13 @@
 import React from 'react';
 import {Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 
-// TopMenu의 props에 대한 타입 정의
+export enum MenuType {
+  Ask = 'ask',
+  Answer = 'answer',
+}
 interface TopMenuProps {
   selectedMenu: string;
-  onSelectMenu: (menu: string) => void; // onSelectMenu는 문자열을 인자로 받는 함수
+  onSelectMenu: (menu: string) => void;
 }
 
 const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
@@ -14,7 +17,10 @@ const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
       style={styles.scrollView}
       showsHorizontalScrollIndicator={false}>
       <TouchableOpacity
-        style={[styles.menuItem, selectedMenu === 'ask' && styles.selectedMenu]}
+        style={[
+          styles.menuItem,
+          selectedMenu === MenuType.Ask && styles.selectedMenu,
+        ]}
         onPress={() => onSelectMenu('ask')}>
         <Text>질문하기</Text>
       </TouchableOpacity>
@@ -22,7 +28,7 @@ const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
       <TouchableOpacity
         style={[
           styles.menuItem,
-          selectedMenu === 'answer' && styles.selectedMenu,
+          selectedMenu === MenuType.Answer && styles.selectedMenu,
         ]}
         onPress={() => onSelectMenu('answer')}>
         <Text>답변하기</Text>

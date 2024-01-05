@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import Header from './component/Header';
-import TopMenu from './component/TopMenu';
+import TopMenu, {MenuType} from './component/TopMenu';
 import Ask from './component/Ask';
 import Answer from './component/Answer';
 import Footer from './component/Footer';
@@ -9,7 +9,7 @@ import Footer from './component/Footer';
 const App = () => {
   const [selectedMenu, setSelectedMenu] = useState('1');
 
-  let ContentComponent = selectedMenu === 'ask' ? Ask : Answer;
+  let ContentComponent = selectedMenu === MenuType.Ask ? Ask : Answer;
 
   return (
     <View style={styles.container}>
