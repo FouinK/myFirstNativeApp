@@ -7,7 +7,7 @@ import Answer from './component/answer/Answer.tsx';
 import Footer from './component/Footer';
 
 const App = () => {
-  const [selectedMenu, setSelectedMenu] = useState('1');
+  const [selectedMenu, setSelectedMenu] = useState(MenuType.Ask);
 
   let ContentComponent = selectedMenu === MenuType.Ask ? Ask : Answer;
 

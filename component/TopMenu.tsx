@@ -7,7 +7,7 @@ export enum MenuType {
 }
 interface TopMenuProps {
   selectedMenu: string;
-  onSelectMenu: (menu: string) => void;
+  onSelectMenu: (menu: MenuType) => void;
 }
 
 const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
@@ -21,7 +21,7 @@ const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
           styles.menuItem,
           selectedMenu === MenuType.Ask && styles.selectedMenu,
         ]}
-        onPress={() => onSelectMenu('ask')}>
+        onPress={() => onSelectMenu(MenuType.Ask)}>
         <Text>질문하기</Text>
       </TouchableOpacity>
 
@@ -30,7 +30,7 @@ const TopMenu: React.FC<TopMenuProps> = ({selectedMenu, onSelectMenu}) => {
           styles.menuItem,
           selectedMenu === MenuType.Answer && styles.selectedMenu,
         ]}
-        onPress={() => onSelectMenu('answer')}>
+        onPress={() => onSelectMenu(MenuType.Answer)}>
         <Text>답변하기</Text>
       </TouchableOpacity>
     </ScrollView>
